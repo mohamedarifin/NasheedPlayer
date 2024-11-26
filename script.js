@@ -1,10 +1,16 @@
 let pages = document.querySelectorAll('.page');
 let page_btn = document.querySelectorAll('.page_btn');
+let burger_menu = document.querySelector('.burger_menu i');
+let nav = document.querySelector('.navb');
 
 page_btn.forEach((btn,index)=>{
     btn.addEventListener('click',()=>{
         pages.forEach((value,ind)=>{
             value.classList.remove('addblock');
+
+            burger_menu.classList.remove('bi-x-square');
+            burger_menu.classList.add('bi-list');
+            nav.classList.remove('addflex');
         })
         pages[index].classList.add('addblock');
     })
@@ -300,11 +306,10 @@ let data = get().then(res=>{
         show_play_btn.classList.add('bi-pause');
     })
 
-let burger_menu = document.querySelector('.burger_menu i');
-let nav = document.querySelector('.navb');
-burger_menu.addEventListener('click',()=>{
-    nav.classList.toggle('addflex');
-})
+
+// burger_menu.addEventListener('click',()=>{
+//     nav.classList.toggle('addflex');
+// })
 burger_menu.addEventListener('click',()=>{
     if(burger_menu.classList.contains('bi-list')){
         burger_menu.classList.remove('bi-list');
