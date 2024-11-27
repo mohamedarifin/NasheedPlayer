@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:cursive
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 #root{
     width: 100vw;
@@ -159,9 +159,10 @@ a{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: end;
     position: absolute;
     top: 0;
+    right: 25px;
     padding-left: 10px;
 }
 .profile{
@@ -365,9 +366,9 @@ a{
 .vocal_player_close{
     position: absolute;
     top: 0;
-    right: 20px;
+    left: 40px;
     display: none;
-    font-size: 30px;
+    font-size: 30px; 
 }
 .vocal_player_show{
     color: rgb(255, 255, 255);
